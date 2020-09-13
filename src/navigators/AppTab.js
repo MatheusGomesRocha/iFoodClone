@@ -1,6 +1,6 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import HomeScreen from '../screens/HomeScreen';
+import HomeTopBar from './HomeTopBar';
 import SearchScreen from '../screens/SearchScreen';
 import HistoryScreen from '../screens/HistoryScreen';
 import ProfileScreen from '../screens/ProfileScreen';
@@ -16,7 +16,7 @@ export default () => {
                 keyboardHidesTabBar: true
             }}
         >
-            <AppTab.Screen name="home" component={HomeScreen} options={{ tabBarLabel:"Início" }}/>
+            <AppTab.Screen name="home" component={HomeTopBar} options={{ tabBarLabel:"Início" }}/>
             <AppTab.Screen name="search" component={SearchScreen} options={{ tabBarLabel:"Busca" }}/>
             <AppTab.Screen name="history" component={HistoryScreen} options={{ tabBarLabel:"Pedidos" }}/>
             <AppTab.Screen name="profile" component={ProfileScreen} options={{ tabBarLabel:"Perfil" }}/>

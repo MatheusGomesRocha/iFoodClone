@@ -1,6 +1,9 @@
 import React, {useEffect} from 'react';
 import styled from 'styled-components/native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import HomeIcon from '../assets/svg/home.svg';
+import SearchIcon from '../assets/svg/search.svg';
+import MenuHistoryIcon from '../assets/svg/menu.svg';
+import ProfileIcon from '../assets/svg/user.svg';
 
 const Div = styled.View `
     flex-direction: row;
@@ -29,22 +32,22 @@ export default ({state, descriptors, navigation, index}) => {          /** Props
     return (
         <Div>
             <Touch key={index} onPress={() => goTo('home')}>
-                <Icon color={state.index == 0 ?'#000':'#bdbdbd'} name="home" size={25} />
+                <HomeIcon width="25" height="25" fill={state.index == 0 ?'#000':'#bdbdbd'} />
                 <Texto style={{color: state.index == 0 ?'#000':'#666'}}> Início </Texto>
             </Touch>
 
             <Touch key={index} onPress={() => goTo('search')}>
-                <Icon color={state.index == 1 ?'#000':'#bdbdbd'} name="search" size={25} />
+                <SearchIcon width="25" height="25" fill={state.index == 1 ?'#000':'#bdbdbd'} />
                 <Texto style={{color: state.index == 1 ?'#000':'#666'}}> Busca </Texto>
 
             </Touch>
             <Touch key={index} onPress={() => goTo('history')}>
-                <Icon color={state.index == 2 ?'#000':'#bdbdbd'} name="tasks" size={25} />
+                <MenuHistoryIcon width="25" height="25" fill={state.index == 2 ?'#000':'#bdbdbd'} />
                 <Texto style={{color: state.index == 2 ?'#000':'#666'}}> Pedidos </Texto>
             </Touch>
 
             <Touch key={index} onPress={() => goTo('profile')}>
-                <Icon color={state.index == 3 ?'#000':'#bdbdbd'} name="user-o" size={25} />
+                <ProfileIcon width="25" height="25" fill={state.index == 3 ?'#000':'#bdbdbd'} />
                 <Texto style={{color: state.index == 3 ?'#000':'#666'}}> Perfil </Texto>
             </Touch>
         </Div>
