@@ -1,9 +1,12 @@
 import React from 'react';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 import {
     Container,
 
     Scroll,
+
+    ScrollHorizontal,
 
     BtnFilter,
     BtnText,
@@ -13,30 +16,57 @@ export default () => {
     return(
         <Container>
             <Scroll>
+                <ScrollHorizontal horizontal={true} showsHorizontalScrollIndicator={false}>
+
+
                 <BtnFilter>
-                    <BtnText>Tipo de loja</BtnText>
+                    <>
+                        <BtnText>Filtros</BtnText>
+                        <Icon style={{marginLeft: 10}} name="tasks" size={12} />
+                    </>
                 </BtnFilter>
+
                 <BtnFilter>
-                    <BtnText>Ordernar</BtnText>
+                    <>
+                        <BtnText>Tipo de loja</BtnText>
+                        <Icon style={{marginLeft: 10}} name="angle-down" size={15} />
+                    </>
                 </BtnFilter>
+
                 <BtnFilter>
-                    <BtnText>Entregas</BtnText>
+                    <>
+                        <BtnText>Ordernar</BtnText>
+                        <Icon style={{marginLeft: 10}} name="angle-down" size={15} />
+                    </>
                 </BtnFilter>
+
+                <BtnFilter>
+                    <BtnText>Entrega grátis</BtnText>
+                </BtnFilter>
+
                  <BtnFilter>
-                    <BtnText>Tipo de loja</BtnText>
+                     <>
+                        <BtnText>Vale-refeição</BtnText>
+                        <Icon style={{marginLeft: 10}} name="angle-down" size={15} />
+                    </>
                 </BtnFilter>
+
                 <BtnFilter>
-                    <BtnText>Tipo de loja</BtnText>
+                    <>
+                        <BtnText>Distância</BtnText>
+                        <Icon style={{marginLeft: 10}} name="angle-down" size={15} />
+                    </>
                 </BtnFilter>
+
                 <BtnFilter>
-                    <BtnText>Tipo de loja</BtnText>
+                    <BtnText>Entrega Parceira</BtnText>
                 </BtnFilter>
+
                  <BtnFilter>
-                    <BtnText>Tipo de loja</BtnText>
+                    <BtnText>Super Restaurante</BtnText>
                 </BtnFilter>
-                <BtnFilter>
-                    <BtnText>Tipo de loja</BtnText>
-                </BtnFilter>
+
+                </ScrollHorizontal>
             </Scroll>
         </Container>
     );

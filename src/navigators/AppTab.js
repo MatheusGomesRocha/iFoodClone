@@ -4,54 +4,17 @@ import HomeScreen from '../screens/HomeScreen';
 import SearchScreen from '../screens/SearchScreen';
 import HistoryScreen from '../screens/HistoryScreen';
 import ProfileScreen from '../screens/ProfileScreen';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import CustomTabBar from '../components/CustomTabBar';
 
 const AppTab = createBottomTabNavigator();
 
 export default () => {
     return(
         <AppTab.Navigator
-        tabBarOptions={{
-            activeTintColor: '#000',
-            inactiveTintColor: '#666',
-            style:{
-                borderTopWidth: 0,
-                borderTopColor: 'transparent',
-                height: 60,
-                padding: 5
-            },
-
-            labelStyle: {
-                paddingBottom: 10
-            },
-
-            keyboardHidesTabBar: true
-        }}
-
-        screenOptions={({route}) =>({           // Passando route como objeto para pegar o nome das rotas futuramente
-            tabBarIcon: ({ focused }) => {      // Adicionando Icons dinamicamente
-                let icon = null;
-
-                switch(route.name) {
-                    case 'home':
-                        icon = "home";
-                    break;
-                    case 'search':
-                        icon = "search";
-                    break;
-                    case 'history':
-                        icon = "outdent";   
-                    break;
-                    case 'profile':
-                        icon = "user";  
-                    break;
-                }
-                
-                // name no Icon irá receber a variável para ser adicionado dinamicamente
-                // Se a Tab estiver focado, irá receber a cor Preta ´para dar um destaque a mais dos outros 
-                return <Icon name={icon} size={25} style={{color: focused ? '#000' : '#cdcdcd'}}/>
-            }
-        })} 
+            tabBar={(props) => <CustomTabBar {...props} />}
+            tabBarOption={{
+                keyboardHidesTabBar: true
+            }}
         >
             <AppTab.Screen name="home" component={HomeScreen} options={{ tabBarLabel:"Início" }}/>
             <AppTab.Screen name="search" component={SearchScreen} options={{ tabBarLabel:"Busca" }}/>
