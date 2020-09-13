@@ -3,13 +3,41 @@ import React from 'react';
 import {
     Container,
 
-    Texto
+    Scroll,
+
+    BtnFilter,
+    BtnText,
 } from './style';
 
 export default () => {
     return(
         <Container>
-            <Texto>Olá mundo Home</Texto> 
+            <Scroll>
+                <BtnFilter>
+                    <BtnText>Tipo de loja</BtnText>
+                </BtnFilter>
+                <BtnFilter>
+                    <BtnText>Ordernar</BtnText>
+                </BtnFilter>
+                <BtnFilter>
+                    <BtnText>Entregas</BtnText>
+                </BtnFilter>
+                 <BtnFilter>
+                    <BtnText>Tipo de loja</BtnText>
+                </BtnFilter>
+                <BtnFilter>
+                    <BtnText>Tipo de loja</BtnText>
+                </BtnFilter>
+                <BtnFilter>
+                    <BtnText>Tipo de loja</BtnText>
+                </BtnFilter>
+                 <BtnFilter>
+                    <BtnText>Tipo de loja</BtnText>
+                </BtnFilter>
+                <BtnFilter>
+                    <BtnText>Tipo de loja</BtnText>
+                </BtnFilter>
+            </Scroll>
         </Container>
     );
 }

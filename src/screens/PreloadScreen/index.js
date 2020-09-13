@@ -1,10 +1,18 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import { StatusBar } from 'react-native';
 import styled from 'styled-components/native';
 import {useNavigation} from '@react-navigation/native';
 
 const Container = styled.SafeAreaView`
     flex: 1;
     background-color: #ea1d2c;
+    align-items: center;
+    justify-content: center
+`;
+
+const Img = styled.Image`
+    width: 180px;
+    height: 130px;
 `;
 
 export default () => {
@@ -22,7 +30,8 @@ export default () => {
     
     return(
         <Container>
-            
+            <StatusBar barStyle="light-content" backgroundColor="#ea1d2c"/>
+            <Img source={require('../../assets/img/ifood_logo.png')} />
         </Container>
     );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import PreloadScreen from '../screens/PreloadScreen';
+import AppTab from './AppTab';
 
 const PreloadStack = createStackNavigator();
 
